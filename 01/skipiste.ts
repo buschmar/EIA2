@@ -16,6 +16,65 @@ function init() {
     crc2.fillStyle = "#ffff02";
     crc2.fill();
     
+    //cloud1
+    
+    crc2.beginPath();
+    crc2.arc(490, 70, 20, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(520, 70, 20, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(550, 70, 20, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(530, 90, 15, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(510, 90, 15, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(530, 60, 25, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    //cloud2
+    
+    crc2.beginPath();
+    crc2.arc(650, 80, 15, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(670, 70, 15, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(630, 70, 15, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(660, 80, 15, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.arc(650, 60, 20, 0, 2 * Math.PI);
+    crc2.fillStyle = "#ffffff";
+    crc2.fill();
+    
     //berg1
     crc2.beginPath();
     crc2.moveTo(-300, 600);
@@ -55,11 +114,11 @@ function init() {
     
     //slalom
     crc2.beginPath();
-    crc2.moveTo(520, 250);
+    crc2.moveTo(550, 250);
     crc2.lineTo(300, 600);
-    crc2.lineTo(550, 600);
+    crc2.lineTo(500, 600);
     crc2.lineTo(580, 250);
-    crc2.lineTo(520, 250);
+    crc2.lineTo(500, 250);
     
     crc2.closePath();
     crc2.strokeStyle = "#ffffff";
@@ -147,10 +206,10 @@ function init() {
     
     //goal
     crc2.beginPath();
-    crc2.moveTo(300, 500);
-    crc2.lineTo(550, 500);
-    crc2.lineTo(550, 455);
-    crc2.lineTo(300, 455);
+    crc2.moveTo(250, 500);
+    crc2.lineTo(500, 500);
+    crc2.lineTo(500, 455);
+    crc2.lineTo(250, 455);
     crc2.closePath();
     crc2.strokeStyle = "red";
     crc2.stroke();
@@ -158,26 +217,26 @@ function init() {
     crc2.fill();
     
     crc2.beginPath();
-    crc2.moveTo(300, 500);
-    crc2.lineTo(300, 600);
+    crc2.moveTo(250, 500);
+    crc2.lineTo(250, 600);
     crc2.closePath();
     crc2.strokeStyle = "red";
     crc2.stroke();
     
     crc2.beginPath();
-    crc2.moveTo(550, 500);
-    crc2.lineTo(550, 600);
+    crc2.moveTo(500, 500);
+    crc2.lineTo(500, 600);
     crc2.closePath();
     crc2.strokeStyle = "red";
     crc2.stroke();
     
     //start
     crc2.beginPath();
-    crc2.moveTo(520, 225);
+    crc2.moveTo(540, 225);
     crc2.lineTo(580, 225);
     crc2.lineTo(580, 235);
-    crc2.lineTo(520, 235);
-    crc2.lineTo(520, 225);
+    crc2.lineTo(540, 235);
+    crc2.lineTo(540, 225);
     crc2.closePath();
     crc2.strokeStyle = "red";
     crc2.stroke();
@@ -186,11 +245,11 @@ function init() {
     
     
     crc2.beginPath();
-    crc2.moveTo(520, 225);
-    crc2.lineTo(530, 225);
-    crc2.lineTo(530, 250);
-    crc2.lineTo(520, 250);
-    crc2.lineTo(520, 225);
+    crc2.moveTo(540, 225);
+    crc2.lineTo(550, 225);
+    crc2.lineTo(550, 250);
+    crc2.lineTo(540, 250);
+    crc2.lineTo(540, 225);
     crc2.closePath();
     crc2.strokeStyle = "red";
     crc2.stroke();
@@ -199,11 +258,11 @@ function init() {
     
     
     crc2.beginPath();
-    crc2.moveTo(570, 225);
-    crc2.lineTo(580, 225);
+    crc2.moveTo(580, 225);
+    crc2.lineTo(590, 225);
+    crc2.lineTo(590, 250);
     crc2.lineTo(580, 250);
-    crc2.lineTo(570, 250);
-    crc2.lineTo(570, 225);
+    crc2.lineTo(580, 225);
     crc2.closePath();
     crc2.strokeStyle = "red";
     crc2.stroke();
