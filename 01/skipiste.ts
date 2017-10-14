@@ -269,5 +269,63 @@ function init() {
     crc2.fillStyle = "red";
     crc2.fill();
     
+    //lift
+    
+    crc2.beginPath();
+    crc2.moveTo(210, 400);
+    crc2.lineTo(210, 600);
+    crc2.closePath();
+    crc2.strokeStyle = "#000000";
+    crc2.stroke();
+    
+    crc2.beginPath();
+    crc2.moveTo(510, 220);
+    crc2.lineTo(510, 250);
+    crc2.closePath();
+    crc2.strokeStyle = "#000000";
+    crc2.stroke();
+    
+    crc2.beginPath();
+    crc2.moveTo(510, 220);
+    crc2.lineTo(210, 400);
+    crc2.closePath();
+    crc2.strokeStyle = "#000000";
+    crc2.stroke();
+    
+    //gondel
+    crc2.beginPath();
+    crc2.moveTo(390, 292);
+    crc2.lineTo(390, 320);
+    crc2.closePath();
+    crc2.strokeStyle = "blue";
+    crc2.stroke();
+    
+    crc2.beginPath();
+    crc2.lineTo(370, 360);
+    crc2.lineTo(410, 360);
+    crc2.lineTo(410, 320);
+    crc2.lineTo(370, 320);
+    crc2.lineTo(370, 360);
+    crc2.closePath();
+    crc2.strokeStyle = "blue";
+    crc2.stroke();
+    crc2.fillStyle = "blue";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.moveTo(380, 350);
+    crc2.lineTo(380, 330);
+    crc2.lineTo(400, 330);
+    crc2.lineTo(400, 350);
+    
+    
+    crc2.closePath();
+    crc2.strokeStyle = "#f6f7aa";
+    crc2.stroke();
+    
+    crc2.fillStyle = "#f6f7aa";
+    crc2.fill();
+    
+    
     
 }
