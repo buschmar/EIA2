@@ -1,5 +1,6 @@
 var A3;
 (function (A3) {
+    window.addEventListener("load", main);
     var canvas;
     var crc2;
     let arrayX = [];
@@ -9,7 +10,6 @@ var A3;
     let skiOrigX = [];
     let skiOrigY = [];
     let image;
-    window.addEventListener("load", main);
     function main() {
         canvas = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
@@ -299,9 +299,9 @@ var A3;
         crc2.fillStyle = "#f6f7aa";
         crc2.fill();
         //Skifahrer
-        for (let i = 0; i < 3; i++) {
-            skiX[i] = 535 + Math.random() * 50;
-            skiY[i] = 240 + Math.random() * 80;
+        for (let i = 0; i < 1; i++) {
+            skiX[i] = 560 + Math.random() * 10;
+            skiY[i] = 260 + Math.random() * 10;
             skiOrigX[i] = skiX[i];
             skiOrigY[i] = skiY[i];
         }
@@ -310,8 +310,9 @@ var A3;
             drawTree(Math.random() * 50 + i * 45, Math.random() * 130 + 300);
         }
         //snow random
-        for (let i = 0; i < 1000; i++) {
-            drawSnow(Math.random() * 800 + 0, Math.random() * 600 + 0);
+        for (let i = 0; i < 5000; i++) {
+            arrayX[i] = 0 + Math.random() * 800;
+            arrayY[i] = 0 + Math.random() * 600;
         }
         image = crc2.getImageData(0, 0, 800, 600);
         animate();
@@ -328,14 +329,6 @@ var A3;
         crc2.lineTo(x + 25, y + 1);
         crc2.closePath();
         crc2.fillStyle = "#477248";
-        crc2.fill();
-    }
-    function drawSnow(x, y) {
-        var canvas = document.getElementsByTagName("canvas")[0];
-        var crc2 = canvas.getContext("2d");
-        crc2.beginPath();
-        crc2.arc(x, y, 2, 3, 3 * Math.PI);
-        crc2.fillStyle = "#ffffff";
         crc2.fill();
     }
     function skifahrer(x, y) {
@@ -357,10 +350,28 @@ var A3;
         crc2.strokeStyle = "purple";
         crc2.stroke();
     }
-    //animate 
+    //ANIMATE
     function animate() {
         //ski.clearRect(0,0,800,600);
         crc2.putImageData(image, 0, 0);
+        //Schneeflocken
+        for (let i = 0; i < arrayX.length; i++) {
+            if (arrayY[i] > 600) {
+                arrayY[i] = 0;
+            }
+            if (arrayX[i] > 800) {
+                arrayX[i] = 0;
+            }
+            arrayX[i] += Math.random();
+            arrayY[i] += Math.random();
+            crc2.beginPath();
+            crc2.arc(arrayX[i], arrayY[i], 0.5, 0, 5 * Math.PI);
+            crc2.strokeStyle = "whitesmoke";
+            crc2.stroke();
+            crc2.fillStyle = "whitesmoke";
+            crc2.fill();
+        }
+        //Skifahrer    
         for (let i = 0; i < skiX.length; i++) {
             skiX[i] += -1;
             skiY[i] += 2;
@@ -370,7 +381,7 @@ var A3;
                 skiX[i] = skiOrigX[i];
             }
         }
-        window.setTimeout(animate, 25);
+        window.setTimeout(animate, 15);
     }
 })(A3 || (A3 = {}));
 //# sourceMappingURL=a3.js.map
