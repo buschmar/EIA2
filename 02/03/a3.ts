@@ -12,6 +12,7 @@ namespace A3 {
     
     let skiOrigX: number[]=[];
     let skiOrigY: number[]=[];
+    
     let image: ImageData;
 
     
@@ -236,32 +237,7 @@ namespace A3 {
     crc2.fill();
     
     
-    //goal
-    crc2.beginPath();
-    crc2.moveTo(250, 500);
-    crc2.lineTo(500, 500);
-    crc2.lineTo(500, 455);
-    crc2.lineTo(250, 455);
-    crc2.closePath();
-    crc2.strokeStyle = "red";
-    crc2.stroke();
-    crc2.fillStyle = "red";
-    crc2.fill();
-    
-    crc2.beginPath();
-    crc2.moveTo(250, 500);
-    crc2.lineTo(250, 600);
-    crc2.closePath();
-    crc2.strokeStyle = "red";
-    crc2.stroke();
-    
-    crc2.beginPath();
-    crc2.moveTo(500, 500);
-    crc2.lineTo(500, 600);
-    crc2.closePath();
-    crc2.strokeStyle = "red";
-    crc2.stroke();
-    
+   
     //start
     crc2.beginPath();
     crc2.moveTo(540, 225);
@@ -300,6 +276,33 @@ namespace A3 {
     crc2.stroke();
     crc2.fillStyle = "red";
     crc2.fill();
+        
+     //goal
+    crc2.beginPath();
+    crc2.moveTo(250, 500);
+    crc2.lineTo(500, 500);
+    crc2.lineTo(500, 455);
+    crc2.lineTo(250, 455);
+    crc2.closePath();
+    crc2.strokeStyle = "red";
+    crc2.stroke();
+    crc2.fillStyle = "red";
+    crc2.fill();
+    
+    crc2.beginPath();
+    crc2.moveTo(250, 500);
+    crc2.lineTo(250, 600);
+    crc2.closePath();
+    crc2.strokeStyle = "red";
+    crc2.stroke();
+    
+    crc2.beginPath();
+    crc2.moveTo(500, 500);
+    crc2.lineTo(500, 600);
+    crc2.closePath();
+    crc2.strokeStyle = "red";
+    crc2.stroke();
+    
     
     //lift
     
@@ -357,11 +360,13 @@ namespace A3 {
     
     crc2.fillStyle = "#f6f7aa";
     crc2.fill();
+        
+        
     
     //Skifahrer
-        for (let i:number=0; i<1;i++) {
-            skiX[i]=560+Math.random()*10;
-            skiY[i]=260+Math.random()*10;
+        for (let i:number=0; i<3;i++) {
+            skiX[i]=520+Math.random()*50;
+            skiY[i]=250+Math.random()*70;
             skiOrigX[i] = skiX[i];
             skiOrigY[i]=skiY[i];
            }
@@ -373,7 +378,7 @@ namespace A3 {
         }
     
     //snow random
-    for (let i: number = 0; i < 5000; i++) {
+    for (let i: number = 0; i < 300; i++) {
             arrayX[i] = 0+Math.random()*800;
             arrayY[i] = 0+Math.random()*600;
         }
@@ -412,14 +417,14 @@ namespace A3 {
         crc2.moveTo(x - 10, y + 15);
         crc2.lineTo(x + 15, y - 10);
         crc2.closePath();
-        crc2.strokeStyle = "purple";
+        crc2.strokeStyle = "green";
         crc2.stroke();
     
         crc2.beginPath();
         crc2.moveTo(x - 20, y + 10);
         crc2.lineTo(x + 15, y - 10);
         crc2.closePath();
-        crc2.strokeStyle = "purple";
+        crc2.strokeStyle = "green";
         crc2.stroke();
         }
     
@@ -445,10 +450,10 @@ namespace A3 {
             arrayX[i] += Math.random();
             arrayY[i] += Math.random();
             crc2.beginPath();
-            crc2.arc(arrayX[i], arrayY[i], 0.5, 0, 5 * Math.PI);
-            crc2.strokeStyle = "whitesmoke";
+            crc2.arc(arrayX[i], arrayY[i], 5, 0, 5 * Math.PI);
+            crc2.strokeStyle = "lightgrey";
             crc2.stroke();
-            crc2.fillStyle = "whitesmoke";
+            crc2.fillStyle = "white";
             crc2.fill();
 
         }
@@ -460,13 +465,13 @@ namespace A3 {
             skiY[i]+=2;
             
             skifahrer(skiX[i],skiY[i]);
-            if (skiX[i]>800) {
+            if (skiY[i]>600) {
                 skiY[i]=skiOrigY[i];
                 skiX[i]=skiOrigX[i];
               }
             
             }
-    window.setTimeout(animate, 15);
+    window.setTimeout(animate, 8);
     }
 
     
