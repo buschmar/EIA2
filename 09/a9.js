@@ -4,6 +4,7 @@ var A9;
     window.addEventListener("keydown", handleKeydown);
     let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     let letter = "";
+    let clickedLetter;
     function init(_event) {
         for (let i = 0; i < alphabet.length; i++) {
             let letter = document.createElement("div");
@@ -16,6 +17,8 @@ var A9;
             letter.style.display = "inline-block";
             letter.innerText = alphabet[i];
             letter.id = alphabet[i].toLowerCase();
+            letter.className = "letterboxes";
+            letter.addEventListener("mousedown", handleClick);
             document.body.appendChild(letter);
         }
         let textBackground = document.createElement("div");
@@ -38,9 +41,24 @@ var A9;
         write.addEventListener("mousedown", handleMousedown);
         document.body.appendChild(write);
     }
+    function handleClick(_event) {
+        let clicked = _event.target;
+        clicked.style.border = "0.1em solid red";
+        clicked.style.color = "red";
+        clickedLetter = clicked.id;
+        let divList = document.getElementsByClassName("letterboxes");
+        for (let i = 0; i < divList.length; i++) {
+            if (clickedLetter != divList[i].id) {
+                divList[i].style.color = "black";
+                divList[i].style.border = "0.1em solid black";
+            }
+        }
+    }
     function handleKeydown(_event) {
         if (alphabet.indexOf(_event.key.toUpperCase()) != -1) {
             let remove = document.getElementById(_event.key);
+            remove.style.color = "red";
+            remove.style.border = "0.1em solid red";
             letter = _event.key.toUpperCase();
         }
     }
