@@ -38,31 +38,30 @@ var A9;
         write.style.position = "absolute";
         write.style.left = 0 + _event.pageX + "px";
         write.style.top = 0 + _event.pageY + "px";
-        write.addEventListener("mousedown", handleMousedown);
+        write.addEventListener("mousedown", handleClickDelete);
         document.body.appendChild(write);
+        let clickedLetter = document.getElementById(letter.toLowerCase());
+        clickedLetter.style.color = "red";
+        clickedLetter.style.border = "0.1em solid red";
+        letter = "";
     }
     function handleClick(_event) {
-        let clicked = _event.target;
-        clicked.style.border = "0.1em solid red";
-        clicked.style.color = "red";
-        clickedLetter = clicked.id;
-        let divList = document.getElementsByClassName("letterboxes");
-        for (let i = 0; i < divList.length; i++) {
-            if (clickedLetter != divList[i].id) {
-                divList[i].style.color = "black";
-                divList[i].style.border = "0.1em solid black";
-            }
+        if (letter == "") {
+            let clicked = _event.target;
+            clicked.style.border = "0.1em solid red";
+            clicked.style.color = "red";
+            letter = clicked.id.toUpperCase();
         }
     }
     function handleKeydown(_event) {
         if (alphabet.indexOf(_event.key.toUpperCase()) != -1) {
-            let remove = document.getElementById(_event.key);
-            remove.style.color = "red";
-            remove.style.border = "0.1em solid red";
+            let s = document.getElementById(_event.key);
+            s.style.color = "red";
+            s.style.border = "0.1em solid red";
             letter = _event.key.toUpperCase();
         }
     }
-    function handleMousedown(_event) {
+    function handleClickDelete(_event) {
         if (_event.altKey == false)
             return;
         else {

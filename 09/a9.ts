@@ -36,9 +36,8 @@ namespace A9 {
   
 
      
-    
-    
-    function writeLetter(_event: MouseEvent): void {
+        
+        function writeLetter(_event: MouseEvent): void {
         let write: HTMLDivElement = document.createElement("div");
 
         if (letter == "")
@@ -52,41 +51,41 @@ namespace A9 {
         write.style.left = 0 + _event.pageX + "px";
         write.style.top = 0 + _event.pageY + "px";
         
-        write.addEventListener("mousedown", handleMousedown);        
-        document.body.appendChild(write);        
+        write.addEventListener("mousedown", handleClickDelete);        
+        document.body.appendChild(write); 
+        
+        let clickedLetter: HTMLDivElement = <HTMLDivElement>document.getElementById(letter.toLowerCase());
+        clickedLetter.style.color = "red";
+        clickedLetter.style.border = "0.1em solid red";
+        letter = "";
     }
+
     
     function handleClick(_event: MouseEvent) : void {
-        
+        if(letter == ""){
             let clicked: HTMLElement = <HTMLElement>_event.target;
 
             clicked.style.border = "0.1em solid red";
             clicked.style.color = "red";        
-            clickedLetter = clicked.id;
+            letter = clicked.id.toUpperCase();
             
-        
-            let divList: NodeListOf<HTMLDivElement> = <NodeListOf<HTMLDivElement>>document.getElementsByClassName("letterboxes");        
-            for (let i: number = 0; i < divList.length; i++ ) {
-                if (clickedLetter != divList[i].id) {
-                    divList[i].style.color = "black";
-                    divList[i].style.border = "0.1em solid black";
-                }
             }
         }
     
    
     function handleKeydown(_event: KeyboardEvent): void {
         if (alphabet.indexOf(_event.key.toUpperCase()) != -1) {
-            let remove: HTMLDivElement = <HTMLDivElement>document.getElementById(_event.key);
-            remove.style.color="red";
-            remove.style.border="0.1em solid red";      
+            let s: HTMLDivElement = <HTMLDivElement>document.getElementById(_event.key);
+            s.style.color="red";
+            s.style.border="0.1em solid red";      
             letter = _event.key.toUpperCase();
         }
     }
     
     
+    
 
-    function handleMousedown(_event: MouseEvent): void {
+    function handleClickDelete(_event: MouseEvent): void {
         if (_event.altKey == false)
             return;
 
