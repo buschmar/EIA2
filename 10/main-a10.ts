@@ -2,7 +2,7 @@
      Matrikel:  254565
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
 
-namespace A10 {
+namespace A11_ {
     window.addEventListener("load", configuration);
     window.addEventListener("change", basket);
 
@@ -16,7 +16,7 @@ namespace A10 {
     var label: HTMLLabelElement;
 
     var basketBaumart: string[] = [bA[0][0], "" + bA[0][1]];
-    var basketStaender: string[] = ["kein Halter ausgewählt", "0"];
+    var basketStaender: string[] = [bB[0][0], "" + bB[0][1]];;
     var basketBeleuchtung: string[] = [b[0][0], "" + b[0][1]];
     var basketSchmuck: string[][] = [];
     var basketLieferopt: string[] = ["keine Lieferoption ausgewählt", "0"];
@@ -243,7 +243,7 @@ namespace A10 {
         korb.innerHTML += "" + basketBeleuchtung[0] + " " + basketBeleuchtung[1] + "€ <br>";
         korb.innerHTML += " " + basketLieferopt[0] + " " + basketLieferopt[1] + "€ <br>";
 
-        gesamtpreis = parseFloat(basketBaumart[1]) + parseFloat(basketStaender[1]) + parseFloat(basketLieferopt[1]);
+        gesamtpreis = parseFloat(basketBaumart[1]) + parseFloat(basketStaender[1]) + parseFloat(basketBeleuchtung[1]) + parseFloat(basketLieferopt[1]);
         for (let i: number = 0; i < stepper.length; i++) {
             if (checkBoxes[i] != null && checkBoxes[i].checked == true) {
                 gesamtpreis += parseFloat(basketSchmuck[i][1]);

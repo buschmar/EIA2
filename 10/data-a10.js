@@ -1,9 +1,9 @@
 /*   Name:       Marius Busch
      Matrikel:  256545
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
-var A10;
-(function (A10) {
-    A10.posten = [
+var A11_;
+(function (A11_) {
+    A11_.posten = [
         { art: "Baumart", name: "Nordmanntanne", preis: 39.99 },
         { art: "Baumart", name: "Fichte", preis: 34.99 },
         { art: "Baumart", name: "Kiefer", preis: 29.99 },
@@ -27,22 +27,22 @@ var A10;
         { art: "Lieferung", name: "Standard-Lieferung", preis: 0.0 },
         { art: "Lieferung", name: "Express-Lieferung", preis: 9.99 }
     ];
-    A10.bA = [];
-    A10.b = [];
-    A10.bB = [];
-    for (var i = 0; i < A10.posten.length; i++) {
-        if (A10.posten[i].art == "Baumart") {
-            var temp = [A10.posten[i].name, A10.posten[i].preis];
-            A10.bA.push(temp);
+    A11_.bA = [];
+    A11_.b = [];
+    A11_.bB = [];
+    for (var i = 0; i < A11_.posten.length; i++) {
+        if (A11_.posten[i].art == "Baumart") {
+            var temp = [A11_.posten[i].name, A11_.posten[i].preis];
+            A11_.bA.push(temp);
         }
-        if (A10.posten[i].art == "Beleuchtung") {
-            var temp = [A10.posten[i].name, A10.posten[i].preis];
-            A10.b.push(temp);
+        if (A11_.posten[i].art == "Beleuchtung") {
+            var temp = [A11_.posten[i].name, A11_.posten[i].preis];
+            A11_.b.push(temp);
         }
-        if (A10.posten[i].art == "Staender") {
-            var temp = [A10.posten[i].name, A10.posten[i].preis];
-            A10.bB.push(temp);
+        if (A11_.posten[i].art == "Staender") {
+            var temp = [A11_.posten[i].name, A11_.posten[i].preis];
+            A11_.bB.push(temp);
         }
     }
-})(A10 || (A10 = {}));
+})(A11_ || (A11_ = {}));
 //# sourceMappingURL=data-a10.js.map

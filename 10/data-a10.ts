@@ -2,7 +2,7 @@
      Matrikel:  256545  
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
 
-namespace A10 {
+namespace A11_ {
    
     export interface Bestellposten {
         art: string;
