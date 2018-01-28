@@ -1,0 +1,90 @@
+/*   Name:		Marius Busch
+     Matrikel:	256545	
+     Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und nicht diktiert. */
+
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	width: ;
+	margin-left: 10em;
+	margin-top: 3em;
+	background-color: #d2f3ce;
+	
+}
+div{
+	display:inline-block;
+	padding-left: 1em;
+}
+img{
+	height: 8em;
+	padding-left: 1em;
+	
+}
+
+h1 {
+	font-family: 'Mountains of Christmas', cursive;
+	color: #42984b;
+	font-size: 3em;
+	float: left;
+}
+
+#schmuck{
+	display: block;
+}
+
+#data{
+	display: block;
+}
+
+#versand{
+	display: block;
+}
+
+h2 {
+	font-size: 1em;
+	display: inline-block;
+}
+
+input:invalid {
+	background: #ffb4b2;
+}
+
+label::after {
+	display: block;
+}
+
+input {
+	margin: 0.5em;
+}
+
+button {
+	
+	color: black;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#data input {
+	display: block;
+	height: max;
+	width: 30%;
+	font-size: 1.1em;
+	background: #efffef;
+}
+
+#korb {
+	position: fixed;
+	right: 1em;
+	top: 0em;
+	padding: 1em;
+	
+}
+
+.wk {
+	font-size: 1.2em;
+}
+ 
