@@ -22,6 +22,8 @@ namespace A11_ {
     var basketLieferopt: string[] = ["keine Lieferoption ausgewählt", "0"];
     
     let feedback: HTMLDivElement = document.createElement("div");
+    
+    
 
     function configuration(): void {
         
@@ -39,27 +41,6 @@ namespace A11_ {
             }
         }
         
-    
-
-        /*
-        let staender: HTMLDivElement = <HTMLDivElement>document.getElementById("staender");
-        for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Staender") {
-                var radioB: HTMLInputElement = document.createElement("input");
-                radioB.type = "radio";
-                radioB.name = "radioGroupHalterung";
-                radioB.value = "radio" + i;
-                radioB.id = "radio" + i;
-                staender.appendChild(radioB);
-
-                label = document.createElement("label");
-                label.id = "label" + i;
-                label.htmlFor = radioB.id;
-                label.innerText = posten[i].name;
-                staender.appendChild(label);
-            }
-        }
-        */
 
         let beleuchtung: HTMLDivElement = <HTMLDivElement>document.getElementById("beleuchtung");
         let selectBox2: HTMLSelectElement = document.createElement("select");
@@ -251,9 +232,11 @@ namespace A11_ {
             }
         }
         korb.innerHTML += "<hr> Gesamtpreis: " + Math.round(gesamtpreis * 100) / 100 + "€";
+          
     }
 
-
+  
+    
     function handleMouseDown(_event: MouseEvent): void {
         feedback.innerText = " ";
         feedback.style.paddingBottom = "1em";
@@ -268,4 +251,5 @@ namespace A11_ {
             document.body.appendChild(feedback);
         }
     }
+    
 }

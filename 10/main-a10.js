@@ -34,25 +34,6 @@ var A11_;
                 selectBox.appendChild(opt);
             }
         }
-        /*
-        let staender: HTMLDivElement = <HTMLDivElement>document.getElementById("staender");
-        for (let i: number = 0; i < posten.length; i++) {
-            if (posten[i].art == "Staender") {
-                var radioB: HTMLInputElement = document.createElement("input");
-                radioB.type = "radio";
-                radioB.name = "radioGroupHalterung";
-                radioB.value = "radio" + i;
-                radioB.id = "radio" + i;
-                staender.appendChild(radioB);
-
-                label = document.createElement("label");
-                label.id = "label" + i;
-                label.htmlFor = radioB.id;
-                label.innerText = posten[i].name;
-                staender.appendChild(label);
-            }
-        }
-        */
         let beleuchtung = document.getElementById("beleuchtung");
         let selectBox2 = document.createElement("select");
         selectBox2.name = "SelectBeleuchtung";

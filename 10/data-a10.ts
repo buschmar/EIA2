@@ -59,7 +59,7 @@ namespace A11_ {
            b.push(temp);
         }
         
-        if (posten[i].art == "Staender") {
+     434edscx   if (posten[i].art == "Staender") {
            var temp: any = [posten[i].name, posten[i].preis]; 
            bB.push(temp);
         }
