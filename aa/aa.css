@@ -1,0 +1,17 @@
+html{
+	background-color: black;
+}
+
+canvas {
+    	display: block;
+    	width: max;
+    	border: 1px solid lightgrey;
+    	}
+	
+img{
+	width: 320px;
+	margin-top: 275px;
+	margin-left: 240px;
+	position: absolute;
+}
+	
